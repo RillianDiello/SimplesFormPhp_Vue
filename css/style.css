@@ -7,3 +7,17 @@ body{
     background-image: url("../img/background.jpg");
     background-size: cover;
 }
+
+.max-width{
+    max-width:900px;
+    width:100%;
+}
+
+
+
+  
+.red-alert{
+    color: red;
+    font-size: 0.9em;
+  }
+  

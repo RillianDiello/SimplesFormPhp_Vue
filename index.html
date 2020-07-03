@@ -13,7 +13,32 @@
 
 <body>
     <div id="app">
-        <h1>Develop Test</h1>
+        <h1>Car insurance calculator</h1>
+        <div id="dvForm" class="max-width white-transparent">
+            <h1>Calculator</h1>
+            <div>
+                <!-- Value of Car -->
+                <div class="form-group">
+                  <label>Estimated value of the Car <span class="red-alert">{{error.valueOfCar}}</span></label>
+                  <input v-model="calculator.valueOfCar" type="text" placeholder="Value between 100 - 100.000 EUR" data-role="input" data-prepend="<span class='mif-user'></span>"/>
+                </div>
+
+                
+                <div class="form-group">
+                    <label>Tax percent <span class="red-alert">{{error.taxPercent}}</span></label>
+                    <input v-model="calculator.taxPercent" type="text" placeholder="Tax Percentage between (0 - 100) %" data-role="input" data-prepend="<span class='mif-user'></span>"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Number of instalments <span class="red-alert">{{error.numInstalments}}</span></label>
+                    <input v-model="calculator.numInstalments" type="text" placeholder="Number of instalments between (1 - 12)" data-role="input" data-prepend="<span class='mif-user'></span>"/>
+                </div>
+               
+                <button class="btn btn-warning">Close</button>
+                <button  class="btn btn-primary" v-on:click="Send" :disabled="disabledButton">Calculator</button>
+              <span>{{messageResult}}</span>
+              </div>
+        </div>
     </div>
 
 
